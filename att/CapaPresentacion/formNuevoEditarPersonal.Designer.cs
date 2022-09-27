@@ -43,8 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExcel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,18 +62,19 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(540, 311);
+            this.groupBox1.Size = new System.Drawing.Size(639, 332);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
             // btnAgregarEscuela
             // 
-            this.btnAgregarEscuela.Location = new System.Drawing.Point(426, 149);
+            this.btnAgregarEscuela.Location = new System.Drawing.Point(444, 150);
             this.btnAgregarEscuela.Name = "btnAgregarEscuela";
-            this.btnAgregarEscuela.Size = new System.Drawing.Size(108, 23);
+            this.btnAgregarEscuela.Size = new System.Drawing.Size(125, 28);
             this.btnAgregarEscuela.TabIndex = 5;
             this.btnAgregarEscuela.Text = "Registrar Huella";
             this.btnAgregarEscuela.UseVisualStyleBackColor = true;
@@ -82,9 +83,9 @@
             // cbEscuela
             // 
             this.cbEscuela.FormattingEnabled = true;
-            this.cbEscuela.Location = new System.Drawing.Point(120, 151);
+            this.cbEscuela.Location = new System.Drawing.Point(138, 151);
             this.cbEscuela.Name = "cbEscuela";
-            this.cbEscuela.Size = new System.Drawing.Size(300, 21);
+            this.cbEscuela.Size = new System.Drawing.Size(300, 28);
             this.cbEscuela.TabIndex = 4;
             // 
             // label5
@@ -92,35 +93,35 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.Size = new System.Drawing.Size(66, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Huella : ";
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(120, 27);
+            this.txtDNI.Location = new System.Drawing.Point(138, 27);
             this.txtDNI.MaxLength = 10;
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(206, 20);
+            this.txtDNI.Size = new System.Drawing.Size(206, 26);
             this.txtDNI.TabIndex = 1;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(120, 66);
+            this.txtApellidos.Location = new System.Drawing.Point(138, 66);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(300, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(300, 26);
             this.txtApellidos.TabIndex = 2;
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(120, 110);
+            this.txtNombres.Location = new System.Drawing.Point(138, 110);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(300, 20);
+            this.txtNombres.Size = new System.Drawing.Size(300, 26);
             this.txtNombres.TabIndex = 3;
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(120, 197);
+            this.txtObservaciones.Location = new System.Drawing.Point(138, 197);
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(364, 96);
             this.txtObservaciones.TabIndex = 6;
@@ -131,7 +132,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 197);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
+            this.label4.Size = new System.Drawing.Size(126, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Observaciones : ";
             // 
@@ -140,7 +141,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(85, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombres : ";
             // 
@@ -149,24 +150,25 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(85, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Apellidos : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Location = new System.Drawing.Point(6, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI : ";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(12, 416);
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(12, 449);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(91, 40);
             this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -174,17 +176,28 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(123, 416);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(132, 449);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(98, 40);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
+            this.btnExcel.Location = new System.Drawing.Point(602, 63);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(49, 30);
+            this.btnExcel.TabIndex = 9;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::asistec.Properties.Resources.att;
+            this.pictureBox1.Image = global::att.Properties.Resources.att;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(93, 81);
@@ -192,21 +205,11 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // btnExcel
-            // 
-            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
-            this.btnExcel.Location = new System.Drawing.Point(503, 63);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(49, 30);
-            this.btnExcel.TabIndex = 9;
-            this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
             // formNuevoEditarPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 452);
+            this.ClientSize = new System.Drawing.Size(687, 506);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
