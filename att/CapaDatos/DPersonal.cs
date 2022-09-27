@@ -72,6 +72,25 @@ namespace att.CapaDatos
 
         }
 
+        public DataTable ListarTodoPersonal()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText = "bsp_listar_todo_personal";
+
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            comando.Parameters.Clear();
+
+            conexion.CerrarConexion();
+
+            return dt;
+
+        }
+
+
         public DataTable BuscarPersonal(int DNI)
         {
             comando.Connection = conexion.AbrirConexion();

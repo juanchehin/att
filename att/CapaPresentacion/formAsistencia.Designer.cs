@@ -72,6 +72,7 @@
             this.btnHuella.Size = new System.Drawing.Size(44, 42);
             this.btnHuella.TabIndex = 9;
             this.btnHuella.UseVisualStyleBackColor = true;
+            this.btnHuella.Click += new System.EventHandler(this.btnHuella_Click);
             // 
             // tbObservaciones
             // 

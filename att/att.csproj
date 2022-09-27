@@ -246,6 +246,12 @@
     <Compile Include="CapaPresentacion\formPersonal.Designer.cs">
       <DependentUpon>formPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\formVerificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\formVerificar.Designer.cs">
+      <DependentUpon>formVerificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CapaPresentacion\CapturarHuella.resx">
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\formPersonal.resx">
       <DependentUpon>formPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\formVerificar.resx">
+      <DependentUpon>formVerificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

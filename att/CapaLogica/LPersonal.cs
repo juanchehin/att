@@ -35,6 +35,14 @@ namespace att.CapaLogica
             tabla = objetoCD.ListarPersonal(pDesde);
             return tabla;
         }
+
+        public DataTable ListarTodoPersonal()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.ListarTodoPersonal();
+            return tabla;
+        }
+
         public static string EliminarPersonal(int IdPersonal)
         {
             DPersonal Obj = new DPersonal();
