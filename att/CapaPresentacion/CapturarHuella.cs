@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace att.CapaPresentacion
 {
@@ -17,6 +9,11 @@ namespace att.CapaPresentacion
         public event OnTemplateEventHandler OnTemplate;
 
         private DPFP.Processing.Enrollment Enroller;
+
+        public CapturarHuella()
+        {
+            InitializeComponent();
+        }
 
         protected override void Init()
         {
@@ -69,9 +66,5 @@ namespace att.CapaPresentacion
             SetStatus(String.Format("Fingerprint samples needed: {0}", Enroller.FeaturesNeeded));
         }
 
-        public CapturarHuella()
-        {
-            InitializeComponent();
-        }
     }
 }

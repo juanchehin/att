@@ -77,14 +77,5 @@ namespace att.CapaPresentacion
 
         }
 
-        private void btnHuella_Click(object sender, EventArgs e)
-        {
-            panelVerificarHuella.Visible = true;
-        }
-
-        private void btnCerrarPanel_Click(object sender, EventArgs e)
-        {
-            panelVerificarHuella.Visible = false;
-        }
     }
 }
