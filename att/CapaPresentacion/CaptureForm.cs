@@ -73,10 +73,6 @@ namespace att.CapaPresentacion
 		
 	#region Form Event Handlers:
 
-		private void CaptureForm_FormClosed(object sender, FormClosedEventArgs e)
-		{
-			Stop();
-		}
 	#endregion
 
 	#region EventHandler Members:

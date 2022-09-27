@@ -32,7 +32,7 @@ namespace att.CapaPresentacion
             dataListadoPersonal.DataSource = ds.Tables[0];
             totalPersonal = ds.Tables[1].Rows[0][0].ToString();
             lblTotalPersonal.Text = totalPersonal;
-            DataGridViewColumn column = dataListadoPersonal.Columns[6];
+            DataGridViewColumn column = dataListadoPersonal.Columns[5];
             column.Width = 180;
         }
 

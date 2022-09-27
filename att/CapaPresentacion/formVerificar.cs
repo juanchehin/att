@@ -14,7 +14,6 @@ namespace att.CapaPresentacion
         DataTable dt = new DataTable();
         string rpta;
 
-
         public formVerificar()
         {
             InitializeComponent();
@@ -73,7 +72,6 @@ namespace att.CapaPresentacion
                         break;
                     }
                 }
-
             }
         }
         private void marcarAsistencia(string DNI)
@@ -84,7 +82,8 @@ namespace att.CapaPresentacion
 
                 if (rpta.Equals("OK"))
                 {
-                    this.MensajeOk("Asistencia marcada");
+                    this.MensajeOk("Asistencia marcada para : " + DNI);
+                    this.Close();
                 }
                 else
                 {
