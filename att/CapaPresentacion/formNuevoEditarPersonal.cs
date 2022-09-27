@@ -1,16 +1,8 @@
 ﻿using att.CapaLogica;
-using att.CapaDatos;
-using att.CapaLogica;
 using ExcelDataReader;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace att.CapaPresentacion
@@ -18,8 +10,7 @@ namespace att.CapaPresentacion
     public partial class formNuevoEditarPersonal : Form
     {
         LPersonal objetoCN = new LPersonal();
-        LEscuelas objetoCL_asistencia = new LEscuelas();
-        private DataSet escuelas;
+
         DataTable respuesta;
 
         private DataSet dtsTablas = new DataSet();
@@ -35,7 +26,7 @@ namespace att.CapaPresentacion
         public formNuevoEditarPersonal()
         {
             InitializeComponent();
-            cargarEscuelas();
+            panelCapturarHuella.Visible = false;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -81,29 +72,13 @@ namespace att.CapaPresentacion
             }
             this.Close();
         }
-        private void cargarEscuelas()
-        {
-            escuelas = objetoCL_asistencia.ListarEscuelas();
 
-            dt = escuelas.Tables[0];
-
-            cbEscuela.DataSource = dt;
-
-            cbEscuela.DisplayMember = "Escuela";
-            cbEscuela.ValueMember = "IdEscuela";
-        }
         
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnAgregarEscuela_Click(object sender, EventArgs e)
-        {
-            formNuevaEditarEscuela frm = new formNuevaEditarEscuela();
-            frm.MdiParent = this.MdiParent;
-            frm.Show();
-        }
 
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -187,6 +162,14 @@ namespace att.CapaPresentacion
 
         }
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            panelCapturarHuella.Visible = true;
+        }
 
+        private void btnCerrarPanel_Click(object sender, EventArgs e)
+        {
+            panelCapturarHuella.Visible = false;
+        }
     }
 }

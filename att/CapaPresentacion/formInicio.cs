@@ -53,20 +53,6 @@ namespace att.CapaPresentacion
             frm.Show();
         }
 
-        private void btnAgregarEscuela_Click(object sender, EventArgs e)
-        {
-            formNuevaEditarEscuela frm = new formNuevaEditarEscuela();
-            frm.MdiParent = this.MdiParent;
-            frm.Show();
-        }
-
-        private void btnListarEscuelas_Click(object sender, EventArgs e)
-        {
-            formEscuelas frm = new formEscuelas();
-            frm.MdiParent = this.MdiParent;
-            frm.Show();
-        }
-
         private void btnConfiguraciones_Click(object sender, EventArgs e)
         {
             formConfiguraciones frm = new formConfiguraciones();
