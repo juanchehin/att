@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.IO;
+using System.Windows.Forms;
 
 namespace att.CapaPresentacion
 {
@@ -11,7 +12,8 @@ namespace att.CapaPresentacion
         private DPFP.Verification.Verification Verificator;
         LPersonal objetoCL = new LPersonal();
         DataTable dt = new DataTable();
-        byte[] data = null;
+        string rpta;
+
 
         public formVerificar()
         {
@@ -59,9 +61,6 @@ namespace att.CapaPresentacion
 
                 foreach (DataRow row in dt.Rows)
                 {
-                    //int resultInt = Int32.Parse(row[6].ToString());
-                    //this.data = (byte[])row[6];
-
                     stream = new MemoryStream((byte[])row[6]);
                     template = new DPFP.Template(stream);
 
@@ -69,12 +68,44 @@ namespace att.CapaPresentacion
                     UpdateStatus(result.FARAchieved);
                     if (result.Verified)
                     {
+                        marcarAsistencia(row[3].ToString());
                         MakeReport("La huella digital fue VERIFICADA. " + row[1] + " " + row[2]);
                         break;
                     }
                 }
 
             }
+        }
+        private void marcarAsistencia(string DNI)
+        {
+            try
+            {
+                rpta = LAsistencias.InsertarAsistencia(Convert.ToInt32(DNI), "-");
+
+                if (rpta.Equals("OK"))
+                {
+                    this.MensajeOk("Asistencia marcada");
+                }
+                else
+                {
+                    this.MensajeError(rpta);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void MensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "att", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void MensajeOk(string mensaje)
+        {
+            MessageBox.Show(mensaje, "att", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
