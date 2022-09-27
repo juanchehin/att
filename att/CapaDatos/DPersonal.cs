@@ -13,7 +13,6 @@ namespace att.CapaDatos
         private string _Nombres;
         private string _DNI;
         private string _Observaciones;
-
         private string _TextoBuscar;
 
 
@@ -180,13 +179,6 @@ namespace att.CapaDatos
                 pNombres.Value = Nombres;
                 comando.Parameters.Add(pNombres);
 
-                MySqlParameter pEscuela = new MySqlParameter();
-                pEscuela.ParameterName = "@pEscuela";
-                pEscuela.MySqlDbType = MySqlDbType.VarChar;
-                pEscuela.Size = 60;
-                pEscuela.Value = Escuela;
-                comando.Parameters.Add(pEscuela);
-
                 MySqlParameter pObservaciones = new MySqlParameter();
                 pObservaciones.ParameterName = "@pObservaciones";
                 pObservaciones.MySqlDbType = MySqlDbType.VarChar;
@@ -195,10 +187,10 @@ namespace att.CapaDatos
                 comando.Parameters.Add(pObservaciones);
 
                 MySqlParameter pHuella = new MySqlParameter();
-                pObservaciones.ParameterName = "@pHuella";
-                pObservaciones.MySqlDbType = MySqlDbType.VarBinary;
-                pObservaciones.Size = 1650;
-                pObservaciones.Value = Huella;
+                pHuella.ParameterName = "@pHuella";
+                pHuella.MySqlDbType = MySqlDbType.VarBinary;
+                pHuella.Size = 1650;
+                pHuella.Value = Huella;
                 comando.Parameters.Add(pHuella);
 
                 rpta = comando.ExecuteScalar().ToString();

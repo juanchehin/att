@@ -25,7 +25,7 @@ namespace att.CapaLogica
         {
             DPersonal Obj = new DPersonal();
 
-            return Obj.InsertarPersonal(DNI, Apellidos, Nombres, Observaciones);
+            return Obj.InsertarPersonalExcel(DNI, Apellidos, Nombres, Observaciones);
         }
 
         public DataSet ListarPersonal(int pDesde)
