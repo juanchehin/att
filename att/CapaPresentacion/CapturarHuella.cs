@@ -33,7 +33,7 @@ namespace att.CapaPresentacion
             // Check quality of the sample and add to enroller if it's good
             if (features != null) try
                 {
-                    MakeReport("The fingerprint feature set was created1.");
+                    MakeReport("Se creó el conjunto de funciones de huellas dactilares.");
                     Enroller.AddFeatures(features);     // Add feature set to template.
                 }
                 finally
@@ -45,7 +45,7 @@ namespace att.CapaPresentacion
                     {
                         case DPFP.Processing.Enrollment.Status.Ready:   // report success and stop capturing
                             OnTemplate(Enroller.Template);
-                            SetPrompt("Click Close, and then click Fingerprint Verification.");
+                            SetPrompt("Haga clic en Cerrar y luego haga clic en Verificación de huellas dactilares.");
                             Stop();
                             break;
 
@@ -63,7 +63,7 @@ namespace att.CapaPresentacion
         private void UpdateStatus()
         {
             // Show number of samples needed.
-            SetStatus(String.Format("Fingerprint samples needed: {0}", Enroller.FeaturesNeeded));
+            SetStatus(String.Format("Se necesitan muestras de huellas dactilares: {0}", Enroller.FeaturesNeeded));
         }
 
     }
