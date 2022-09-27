@@ -32,10 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnConfiguraciones = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnAgregarEscuela = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnListarEscuelas = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgregarPersonal = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,10 +50,6 @@
             // 
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnConfiguraciones);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.btnAgregarEscuela);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.btnListarEscuelas);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnAgregarPersonal);
             this.groupBox1.Controls.Add(this.label3);
@@ -77,7 +69,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(473, 391);
+            this.label7.Location = new System.Drawing.Point(84, 393);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 17);
             this.label7.TabIndex = 14;
@@ -86,52 +78,12 @@
             // btnConfiguraciones
             // 
             this.btnConfiguraciones.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguraciones.Image")));
-            this.btnConfiguraciones.Location = new System.Drawing.Point(442, 222);
+            this.btnConfiguraciones.Location = new System.Drawing.Point(53, 224);
             this.btnConfiguraciones.Name = "btnConfiguraciones";
             this.btnConfiguraciones.Size = new System.Drawing.Size(173, 157);
             this.btnConfiguraciones.TabIndex = 13;
             this.btnConfiguraciones.UseVisualStyleBackColor = true;
             this.btnConfiguraciones.Click += new System.EventHandler(this.btnConfiguraciones_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(278, 391);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Agregar escuela";
-            // 
-            // btnAgregarEscuela
-            // 
-            this.btnAgregarEscuela.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarEscuela.Image")));
-            this.btnAgregarEscuela.Location = new System.Drawing.Point(247, 222);
-            this.btnAgregarEscuela.Name = "btnAgregarEscuela";
-            this.btnAgregarEscuela.Size = new System.Drawing.Size(173, 157);
-            this.btnAgregarEscuela.TabIndex = 6;
-            this.btnAgregarEscuela.UseVisualStyleBackColor = true;
-            this.btnAgregarEscuela.Click += new System.EventHandler(this.btnAgregarEscuela_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(84, 391);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Listar escuelas";
-            // 
-            // btnListarEscuelas
-            // 
-            this.btnListarEscuelas.Image = ((System.Drawing.Image)(resources.GetObject("btnListarEscuelas.Image")));
-            this.btnListarEscuelas.Location = new System.Drawing.Point(53, 222);
-            this.btnListarEscuelas.Name = "btnListarEscuelas";
-            this.btnListarEscuelas.Size = new System.Drawing.Size(173, 157);
-            this.btnListarEscuelas.TabIndex = 5;
-            this.btnListarEscuelas.UseVisualStyleBackColor = true;
-            this.btnListarEscuelas.Click += new System.EventHandler(this.btnListarEscuelas_Click);
             // 
             // label4
             // 
@@ -225,7 +177,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::asistec.Properties.Resources.att;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 81);
@@ -265,10 +217,6 @@
         private System.Windows.Forms.Button btnAgregarPersonal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnListarPersonal;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnAgregarEscuela;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnListarEscuelas;
         private System.Windows.Forms.Button btnAcercaDe;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnConfiguraciones;

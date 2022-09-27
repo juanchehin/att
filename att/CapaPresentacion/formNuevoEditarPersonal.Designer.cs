@@ -75,7 +75,7 @@
             this.btnAgregarEscuela.Name = "btnAgregarEscuela";
             this.btnAgregarEscuela.Size = new System.Drawing.Size(108, 23);
             this.btnAgregarEscuela.TabIndex = 5;
-            this.btnAgregarEscuela.Text = "Agregar escuela";
+            this.btnAgregarEscuela.Text = "Registrar Huella";
             this.btnAgregarEscuela.UseVisualStyleBackColor = true;
             this.btnAgregarEscuela.Click += new System.EventHandler(this.btnAgregarEscuela_Click);
             // 
@@ -92,9 +92,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Escuela : ";
+            this.label5.Text = "Huella : ";
             // 
             // txtDNI
             // 
@@ -184,7 +184,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::asistec.Properties.Resources.att;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(93, 81);

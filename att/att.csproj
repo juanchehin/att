@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{988C5AC8-B7F7-469C-BFBB-463D6A085279}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>asistec</RootNamespace>
-    <AssemblyName>asistec</AssemblyName>
+    <RootNamespace>att</RootNamespace>
+    <AssemblyName>att</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,8 +65,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>att.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -291,10 +290,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="att.ico" />
     <Content Include="recursos\att.ico" />
     <Content Include="recursos\att.png" />
     <Content Include="recursos\excel.png" />
     <Content Include="recursos\excel1.png" />
+    <Content Include="recursos\fingerprint.png" />
+    <None Include="Resources\fingerprint.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />

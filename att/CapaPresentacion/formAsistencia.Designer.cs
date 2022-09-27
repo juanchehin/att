@@ -36,7 +36,16 @@
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnHuella = new System.Windows.Forms.Button();
+            this.panelVerificarHuella = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCerrarPanel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.panelVerificarHuella.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,6 +59,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnHuella);
             this.groupBox1.Controls.Add(this.tbObservaciones);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDNI);
@@ -106,11 +116,76 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // btnHuella
+            // 
+            this.btnHuella.Image = ((System.Drawing.Image)(resources.GetObject("btnHuella.Image")));
+            this.btnHuella.Location = new System.Drawing.Point(439, 13);
+            this.btnHuella.Name = "btnHuella";
+            this.btnHuella.Size = new System.Drawing.Size(44, 42);
+            this.btnHuella.TabIndex = 9;
+            this.btnHuella.UseVisualStyleBackColor = true;
+            // 
+            // panelVerificarHuella
+            // 
+            this.panelVerificarHuella.Controls.Add(this.btnCerrarPanel);
+            this.panelVerificarHuella.Controls.Add(this.textBox2);
+            this.panelVerificarHuella.Controls.Add(this.label2);
+            this.panelVerificarHuella.Controls.Add(this.textBox1);
+            this.panelVerificarHuella.Controls.Add(this.pictureBox1);
+            this.panelVerificarHuella.Location = new System.Drawing.Point(12, 12);
+            this.panelVerificarHuella.Name = "panelVerificarHuella";
+            this.panelVerificarHuella.Size = new System.Drawing.Size(850, 554);
+            this.panelVerificarHuella.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(346, 440);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(379, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(439, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(379, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Estado :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(382, 77);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(436, 383);
+            this.textBox2.TabIndex = 3;
+            // 
+            // btnCerrarPanel
+            // 
+            this.btnCerrarPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarPanel.Location = new System.Drawing.Point(783, 5);
+            this.btnCerrarPanel.Name = "btnCerrarPanel";
+            this.btnCerrarPanel.Size = new System.Drawing.Size(34, 23);
+            this.btnCerrarPanel.TabIndex = 4;
+            this.btnCerrarPanel.Text = "X";
+            this.btnCerrarPanel.UseVisualStyleBackColor = true;
+            // 
             // formAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 328);
+            this.ClientSize = new System.Drawing.Size(1015, 620);
+            this.Controls.Add(this.panelVerificarHuella);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
@@ -119,6 +194,9 @@
             this.Text = "Nueva asistencia";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelVerificarHuella.ResumeLayout(false);
+            this.panelVerificarHuella.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,5 +210,12 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.RichTextBox tbObservaciones;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnHuella;
+        private System.Windows.Forms.Panel panelVerificarHuella;
+        private System.Windows.Forms.Button btnCerrarPanel;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
