@@ -150,13 +150,11 @@ namespace att.CapaDatos
 
         //Métodos
         //Insertar
-        public string InsertarPersonal(DPersonal Personal)
+        public string InsertarPersonal(string DNI, string Apellidos, string Nombres, string Observaciones, byte[] Huella)
         {
             string rpta = "";
             try
-            {
-
-                
+            {                
                 comando.Connection = conexion.AbrirConexion();
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "bsp_alta_personal";
@@ -165,37 +163,101 @@ namespace att.CapaDatos
                 pDNI.ParameterName = "@pDNI";
                 pDNI.MySqlDbType = MySqlDbType.Int32;
                 pDNI.Size = 11;
-                pDNI.Value = Personal.DNI;
+                pDNI.Value = DNI;
                 comando.Parameters.Add(pDNI);
 
                 MySqlParameter pApellidos = new MySqlParameter();
                 pApellidos.ParameterName = "@pApellidos";
                 pApellidos.MySqlDbType = MySqlDbType.VarChar;
                 pApellidos.Size = 60;
-                pApellidos.Value = Personal.Apellidos;
+                pApellidos.Value = Apellidos;
                 comando.Parameters.Add(pApellidos);
 
                 MySqlParameter pNombres = new MySqlParameter();
                 pNombres.ParameterName = "@pNombres";
                 pNombres.MySqlDbType = MySqlDbType.VarChar;
                 pNombres.Size = 60;
-                pNombres.Value = Personal.Nombres;
+                pNombres.Value = Nombres;
                 comando.Parameters.Add(pNombres);
 
                 MySqlParameter pEscuela = new MySqlParameter();
                 pEscuela.ParameterName = "@pEscuela";
                 pEscuela.MySqlDbType = MySqlDbType.VarChar;
                 pEscuela.Size = 60;
-                pEscuela.Value = Personal.Escuela;
+                pEscuela.Value = Escuela;
                 comando.Parameters.Add(pEscuela);
 
                 MySqlParameter pObservaciones = new MySqlParameter();
                 pObservaciones.ParameterName = "@pObservaciones";
                 pObservaciones.MySqlDbType = MySqlDbType.VarChar;
                 pObservaciones.Size = 250;
-                pObservaciones.Value = Personal.Observaciones;
+                pObservaciones.Value = Observaciones;
                 comando.Parameters.Add(pObservaciones);
 
+                MySqlParameter pHuella = new MySqlParameter();
+                pObservaciones.ParameterName = "@pHuella";
+                pObservaciones.MySqlDbType = MySqlDbType.VarBinary;
+                pObservaciones.Size = 1650;
+                pObservaciones.Value = Huella;
+                comando.Parameters.Add(pHuella);
+
+                rpta = comando.ExecuteScalar().ToString();
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+            return rpta;
+
+        }
+
+        public string InsertarPersonalExcel(string DNI, string Apellidos, string Nombres, string Observaciones)
+        {
+            string rpta = "";
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = "bsp_alta_personal_excel";
+
+                MySqlParameter pDNI = new MySqlParameter();
+                pDNI.ParameterName = "@pDNI";
+                pDNI.MySqlDbType = MySqlDbType.Int32;
+                pDNI.Size = 11;
+                pDNI.Value = DNI;
+                comando.Parameters.Add(pDNI);
+
+                MySqlParameter pApellidos = new MySqlParameter();
+                pApellidos.ParameterName = "@pApellidos";
+                pApellidos.MySqlDbType = MySqlDbType.VarChar;
+                pApellidos.Size = 60;
+                pApellidos.Value = Apellidos;
+                comando.Parameters.Add(pApellidos);
+
+                MySqlParameter pNombres = new MySqlParameter();
+                pNombres.ParameterName = "@pNombres";
+                pNombres.MySqlDbType = MySqlDbType.VarChar;
+                pNombres.Size = 60;
+                pNombres.Value = Nombres;
+                comando.Parameters.Add(pNombres);
+
+                MySqlParameter pEscuela = new MySqlParameter();
+                pEscuela.ParameterName = "@pEscuela";
+                pEscuela.MySqlDbType = MySqlDbType.VarChar;
+                pEscuela.Size = 60;
+                pEscuela.Value = Escuela;
+                comando.Parameters.Add(pEscuela);
+
+                MySqlParameter pObservaciones = new MySqlParameter();
+                pObservaciones.ParameterName = "@pObservaciones";
+                pObservaciones.MySqlDbType = MySqlDbType.VarChar;
+                pObservaciones.Size = 250;
+                pObservaciones.Value = Observaciones;
+                comando.Parameters.Add(pObservaciones);
 
                 rpta = comando.ExecuteScalar().ToString();
             }

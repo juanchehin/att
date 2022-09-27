@@ -14,16 +14,18 @@ namespace att.CapaLogica
         public string Nombres { get; set; }
         public string DNI { get; set; }
 
-        public static string InsertarPersonal(string DNI,string Escuela,string Apellidos, string Nombres, string Observaciones)
+        public static string InsertarPersonal(string DNI,string Apellidos, string Nombres, string Observaciones, byte[] Huella)
         {
             DPersonal Obj = new DPersonal();
-            Obj.DNI = DNI;
-            Obj.Escuela = Escuela;
-            Obj.Apellidos = Apellidos;
-            Obj.Nombres = Nombres;
-            Obj.Observaciones = Observaciones;
 
-            return Obj.InsertarPersonal(Obj);
+            return Obj.InsertarPersonal(DNI, Apellidos, Nombres, Observaciones, Huella);
+        }
+
+        public static string InsertarPersonalExcel(string DNI, string Apellidos, string Nombres, string Observaciones)
+        {
+            DPersonal Obj = new DPersonal();
+
+            return Obj.InsertarPersonal(DNI, Apellidos, Nombres, Observaciones);
         }
 
         public DataSet ListarPersonal(int pDesde)

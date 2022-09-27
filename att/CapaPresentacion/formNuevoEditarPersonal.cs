@@ -33,6 +33,7 @@ namespace att.CapaPresentacion
         {
             try
             {
+                byte[] streamHuella = Template.Bytes;
                 string rpta = "";
                 if (this.txtDNI.Text == string.Empty)
                 {
@@ -42,8 +43,7 @@ namespace att.CapaPresentacion
                 {
                     if (this.IsNuevo)
                     {
-                        // Agregar la huella
-                        //rpta = LPersonal.InsertarPersonal(this.txtDNI.Text.Trim(),HUELLA, this.txtApellidos.Text.Trim(), this.txtNombres.Text.Trim(), this.txtObservaciones.Text.Trim());
+                        rpta = LPersonal.InsertarPersonal(this.txtDNI.Text.Trim(), this.txtApellidos.Text.Trim(), this.txtNombres.Text.Trim(), this.txtObservaciones.Text.Trim(),streamHuella);
                     }
                     else
                     {
@@ -125,7 +125,7 @@ namespace att.CapaPresentacion
                         string Observaciones = dt.Rows[i][j].ToString();
                         j = j+1;
 
-                        rpta = LPersonal.InsertarPersonal(DNI.Trim(), Escuela.Trim(), Apellidos.Trim(), Nombres.Trim(), Observaciones.Trim());
+                        rpta = LPersonal.InsertarPersonalExcel(DNI.Trim(), Apellidos.Trim(), Nombres.Trim(), Observaciones.Trim());
                         
                         if(rpta == "Ok" || rpta == "OK")
                         {
@@ -172,12 +172,12 @@ namespace att.CapaPresentacion
                 btnAceptar.Enabled = (Template != null);
                 if (Template != null)
                 {
-                    MessageBox.Show("The fingerprint template is ready for fingerprint verification.", "Fingerprint Enrollment");
+                    MessageBox.Show("La plantilla de huellas dactilares está lista para la verificación de huellas dactilares.", "Inscripción de huellas dactilares");
                     txtHuella.Text = "Huella capturada correctamente";
                 }
                 else
                 {
-                    MessageBox.Show("The fingerprint template is not valid. Repeat fingerprint enrollment.", "Fingerprint Enrollment");
+                    MessageBox.Show("La plantilla de huella digital no es válida. Repita el registro de huellas dactilares.", "Inscripción de huellas dactilares");
                 }
             }));
         }
