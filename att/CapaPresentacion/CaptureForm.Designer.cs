@@ -116,6 +116,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CaptureForm";
             this.Text = "CaptureForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CaptureForm_FormClosed_1);
+            this.Load += new System.EventHandler(this.CaptureForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHuella)).EndInit();
             this.ResumeLayout(false);

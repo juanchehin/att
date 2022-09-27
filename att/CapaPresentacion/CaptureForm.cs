@@ -73,12 +73,6 @@ namespace att.CapaPresentacion
 		
 	#region Form Event Handlers:
 
-		private void CaptureForm_Load(object sender, EventArgs e)
-		{
-			Init();
-			Start();												// Start capture operation.
-		}
-
 		private void CaptureForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			Stop();
@@ -172,5 +166,15 @@ namespace att.CapaPresentacion
 
 		private DPFP.Capture.Capture Capturer;
 
-	}
+        private void CaptureForm_Load_1(object sender, EventArgs e)
+        {
+			Init();
+			Start();                                                // Start capture operation.
+		}
+
+        private void CaptureForm_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+			Stop();
+		}
+    }
 }
