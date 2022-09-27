@@ -23,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <SupportUrl>https://juanchehin.github.io/slider/</SupportUrl>
+    <SupportUrl>https://juanchehin.github.io/chehin-ingenieria/</SupportUrl>
     <ProductName>asistec</ProductName>
     <PublisherName>Chehin Juan Martin</PublisherName>
-    <SuiteName>asistec</SuiteName>
+    <SuiteName>ATT</SuiteName>
     <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
