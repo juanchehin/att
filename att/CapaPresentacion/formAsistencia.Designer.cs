@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAsistencia));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnHuella = new System.Windows.Forms.Button();
-            this.tbObservaciones = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDNI = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.panelVerificarHuella = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnCerrarPanel = new System.Windows.Forms.Button();
@@ -44,6 +38,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHuella = new System.Windows.Forms.Button();
+            this.tbObservaciones = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panelVerificarHuella.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,7 +60,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panelVerificarHuella);
             this.groupBox1.Controls.Add(this.btnHuella);
             this.groupBox1.Controls.Add(this.tbObservaciones);
             this.groupBox1.Controls.Add(this.label5);
@@ -73,6 +72,73 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // panelVerificarHuella
+            // 
+            this.panelVerificarHuella.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelVerificarHuella.Controls.Add(this.lblStatus);
+            this.panelVerificarHuella.Controls.Add(this.btnCerrarPanel);
+            this.panelVerificarHuella.Controls.Add(this.textBox2);
+            this.panelVerificarHuella.Controls.Add(this.label2);
+            this.panelVerificarHuella.Controls.Add(this.textBox1);
+            this.panelVerificarHuella.Controls.Add(this.pictureBox1);
+            this.panelVerificarHuella.Location = new System.Drawing.Point(12, 3);
+            this.panelVerificarHuella.Name = "panelVerificarHuella";
+            this.panelVerificarHuella.Size = new System.Drawing.Size(850, 554);
+            this.panelVerificarHuella.TabIndex = 5;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(13, 478);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(46, 13);
+            this.lblStatus.TabIndex = 5;
+            this.lblStatus.Text = "Estado :";
+            // 
+            // btnCerrarPanel
+            // 
+            this.btnCerrarPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarPanel.Location = new System.Drawing.Point(783, 5);
+            this.btnCerrarPanel.Name = "btnCerrarPanel";
+            this.btnCerrarPanel.Size = new System.Drawing.Size(34, 23);
+            this.btnCerrarPanel.TabIndex = 4;
+            this.btnCerrarPanel.Text = "X";
+            this.btnCerrarPanel.UseVisualStyleBackColor = true;
+            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(382, 77);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(436, 383);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(379, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Estado :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(379, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(439, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(346, 440);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnHuella
             // 
@@ -131,78 +197,12 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // panelVerificarHuella
-            // 
-            this.panelVerificarHuella.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelVerificarHuella.Controls.Add(this.lblStatus);
-            this.panelVerificarHuella.Controls.Add(this.btnCerrarPanel);
-            this.panelVerificarHuella.Controls.Add(this.textBox2);
-            this.panelVerificarHuella.Controls.Add(this.label2);
-            this.panelVerificarHuella.Controls.Add(this.textBox1);
-            this.panelVerificarHuella.Controls.Add(this.pictureBox1);
-            this.panelVerificarHuella.Location = new System.Drawing.Point(6, 0);
-            this.panelVerificarHuella.Name = "panelVerificarHuella";
-            this.panelVerificarHuella.Size = new System.Drawing.Size(850, 554);
-            this.panelVerificarHuella.TabIndex = 5;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(13, 478);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(68, 20);
-            this.lblStatus.TabIndex = 5;
-            this.lblStatus.Text = "Estado :";
-            // 
-            // btnCerrarPanel
-            // 
-            this.btnCerrarPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarPanel.Location = new System.Drawing.Point(783, 5);
-            this.btnCerrarPanel.Name = "btnCerrarPanel";
-            this.btnCerrarPanel.Size = new System.Drawing.Size(34, 23);
-            this.btnCerrarPanel.TabIndex = 4;
-            this.btnCerrarPanel.Text = "X";
-            this.btnCerrarPanel.UseVisualStyleBackColor = true;
-            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(382, 77);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(436, 383);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(379, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Estado :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(379, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(439, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(346, 440);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // formAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 526);
+            this.ClientSize = new System.Drawing.Size(966, 637);
+            this.Controls.Add(this.panelVerificarHuella);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);

@@ -10,6 +10,7 @@ namespace att.CapaPresentacion
     public partial class formNuevoEditarPersonal : Form
     {
         LPersonal objetoCN = new LPersonal();
+        private DPFP.Template Template;
 
         DataTable respuesta;
 
@@ -26,7 +27,6 @@ namespace att.CapaPresentacion
         public formNuevoEditarPersonal()
         {
             InitializeComponent();
-            panelCapturarHuella.Visible = false;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -42,7 +42,8 @@ namespace att.CapaPresentacion
                 {
                     if (this.IsNuevo)
                     {
-                        rpta = LPersonal.InsertarPersonal(this.txtDNI.Text.Trim(),this.cbEscuela.Text, this.txtApellidos.Text.Trim(), this.txtNombres.Text.Trim(), this.txtObservaciones.Text.Trim());
+                        // Agregar la huella
+                        //rpta = LPersonal.InsertarPersonal(this.txtDNI.Text.Trim(),HUELLA, this.txtApellidos.Text.Trim(), this.txtNombres.Text.Trim(), this.txtObservaciones.Text.Trim());
                     }
                     else
                     {
@@ -79,16 +80,10 @@ namespace att.CapaPresentacion
             this.Close();
         }
 
-
-
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            // cargando page = new cargando();
-            // frm.MdiParent = this.MdiParent;
-            // page.Show();
             try
             {
-
             //configuracion de ventana para seleccionar un archivo
             OpenFileDialog oOpenFileDialog = new OpenFileDialog();
             oOpenFileDialog.Filter = "Excel Worbook|*.xlsx";
@@ -164,12 +159,28 @@ namespace att.CapaPresentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            panelCapturarHuella.Visible = true;
+            CapturarHuella capturar = new CapturarHuella();
+            capturar.OnTemplate += this.OnTemplate;
+            capturar.ShowDialog();
         }
 
-        private void btnCerrarPanel_Click(object sender, EventArgs e)
+        private void OnTemplate(DPFP.Template template)
         {
-            panelCapturarHuella.Visible = false;
+            this.Invoke(new Function(delegate ()
+            {
+                Template = template;
+                btnAceptar.Enabled = (Template != null);
+                if (Template != null)
+                {
+                    MessageBox.Show("The fingerprint template is ready for fingerprint verification.", "Fingerprint Enrollment");
+                    txtHuella.Text = "Huella capturada correctamente";
+                }
+                else
+                {
+                    MessageBox.Show("The fingerprint template is not valid. Repeat fingerprint enrollment.", "Fingerprint Enrollment");
+                }
+            }));
         }
+
     }
 }
