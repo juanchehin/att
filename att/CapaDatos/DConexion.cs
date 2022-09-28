@@ -6,7 +6,7 @@ namespace att.CapaDatos
 {
     public class DConexion
     {
-        MySqlConnection Con = new MySqlConnection("datasource =localhost;username = root;password = '';database=att");
+        MySqlConnection Con = new MySqlConnection("datasource =localhost;username = att;password = 'Rj74W1Kx5ca7';database=att");
 
         public DConexion()
         {
